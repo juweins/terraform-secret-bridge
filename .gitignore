@@ -1,3 +1,6 @@
+# Ignore hidden files by default
+.*
+
 # Local .terraform directories
 **/.terraform/*
 
