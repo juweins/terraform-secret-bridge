@@ -1,6 +1,16 @@
 # variables
 
-#bitwarden
+# Azure
+
+variable "az_rg" {
+  type    = string
+}
+
+variable "az_sp_object_id" {
+  type    = string
+}
+
+# Bitwarden
 variable "bw_password" {
   type    = string
 }
@@ -14,10 +24,6 @@ variable "bw_client_secret" {
 }
 
 variable "bw_email" {
-  type    = string
-}
-
-variable "bw_server" {
   type    = string
 }
 

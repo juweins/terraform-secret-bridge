@@ -1,9 +1,9 @@
 # Provider configuration
 terraform {
   backend "azurerm" {
-    resource_group_name  = "tfstate-rg"
-    storage_account_name = "2023tfstatestorage"
-    container_name       = "tfstatecontainer"
+    resource_group_name  = "<resource_group_name>"
+    storage_account_name = "<storage_account_name>"
+    container_name       = "<container_name>"
     key                  = "secret_bridge.tfstate"
   }
   required_providers {
@@ -16,6 +16,7 @@ terraform {
       version = "~> 3.67.0"
     }
   }
+  required_version = "~> 1.5"
 }
 
 provider "azurerm" {
@@ -26,6 +27,6 @@ provider "bitwarden" {
   master_password = var.bw_password
   client_id       = var.bw_client_id
   client_secret   = var.bw_client_secret
-  email           = var.bw_email               # Use Demo Account
+  email           = var.bw_email                 # Use Demo Account
   server          = "https://vault.bitwarden.eu" # EU Server (.eu, US Server is .com)
 }
