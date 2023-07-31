@@ -8,6 +8,9 @@
 *.tfstate
 *.tfstate.*
 
+# Project specific .tf files
+provider.tf
+
 # Crash log files
 crash.log
 crash.*.log

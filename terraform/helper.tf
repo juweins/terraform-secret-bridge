@@ -12,12 +12,4 @@ locals {
     for entry in split("\n", local.bw_secret_string) :
     trimspace(element(split("=", entry), 0)) => trimspace(element(split("=", entry), 1))
   }
-  
-# Nested map for the secret entries workaround TF
-  akv_secret_entries = {
-    for key, value in local.bw_secret_map :
-    key => {
-      value = value
-    }
-  }
 }
